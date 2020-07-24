@@ -33,14 +33,8 @@ config :kaffy,
   otp_app: :admin_panel,
   ecto_repo: AdminPanel.Repo,
   router: AdminPanelWeb.Router,
-  resources: [
-  users: [
-    resources: [
-      user: [schema: AdminPanel.Accounts.User]
-    ]
-  ]
-],
-extensions: [
+  resources: &AdminPanel.Kaffy.Config.create_resources/1,
+  extensions: [
     AdminPanel.Kaffy.Extension
   ]
 import_config "#{Mix.env()}.exs"

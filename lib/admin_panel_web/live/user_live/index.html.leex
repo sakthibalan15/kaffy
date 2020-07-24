@@ -8,7 +8,16 @@
     user: @user,
     return_to: Routes.user_index_path(@socket, :index) %>
 <% end %>
+<div x-data="{ open: false }">
+    <button @click="open = true">Open Dropdown</button>
 
+    <ul
+        x-show="open"
+        @click.away="open = false"
+    >
+        Dropdown Body
+    </ul>
+</div>
 <table>
   <thead>
     <tr>

@@ -1,0 +1,32 @@
+<h1>Show Employee</h1>
+
+<%= if @live_action in [:edit] do %>
+  <%= live_modal @socket, AdminPanelWeb.EmployeeLive.FormComponent,
+    id: @employee.id,
+    title: @page_title,
+    action: @live_action,
+    employee: @employee,
+    return_to: Routes.employee_show_path(@socket, :show, @employee) %>
+<% end %>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @employee.name %>
+  </li>
+
+  <li>
+    <strong>Designation:</strong>
+    <%= @employee.designation %>
+  </li>
+
+  <li>
+    <strong>Location:</strong>
+    <%= @employee.location %>
+  </li>
+
+</ul>
+
+<span><%= live_patch "Edit", to: Routes.employee_show_path(@socket, :edit, @employee), class: "button" %></span>
+<span><%= live_redirect "Back", to: Routes.employee_index_path(@socket, :index) %></span>

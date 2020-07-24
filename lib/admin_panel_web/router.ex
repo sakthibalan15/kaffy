@@ -36,6 +36,13 @@ defmodule AdminPanelWeb.Router do
     live "/users/:id", UserLive.Show, :show
     live "/users/:id/show/edit", UserLive.Show, :edit
 
+    live "/employees", EmployeeLive.Index, :index
+    live "/employees/new", EmployeeLive.Index, :new
+    live "/employees/:id/edit", EmployeeLive.Index, :edit
+
+    live "/employees/:id", EmployeeLive.Show, :show
+    live "/employees/:id/show/edit", EmployeeLive.Show, :edit
+
   end
 
   # Other scopes may use custom stacks.
