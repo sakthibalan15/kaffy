@@ -3,7 +3,7 @@ defmodule AdminPanel.Kaffy.Config do
     [
       accounts: [
         resources: [
-          user: [schema: AdminPanel.Accounts.User],
+          user: [schema: AdminPanel.Accounts.User, admin: AdminPanel.Accounts.UserAdmin],
           employee: [schema: AdminPanel.Accounts.Employee]
         ]
       ]

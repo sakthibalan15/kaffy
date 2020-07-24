@@ -1,7 +1,7 @@
 defmodule AdminPanel.Kaffy.Extension do
   def stylesheets(_conn) do
     [
-      {:safe, ~s(<link rel="stylesheet" href="/css/all.css" />)},
+      {:safe, ~s(<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>)},
       {:safe, ~s(<link rel="stylesheet" href="/css/vendor.bundle.base.css" />)},
       {:safe, ~s(<link rel="stylesheet" href="/css/style.css" />)},
       {:safe, ~s(<link rel="stylesheet" href="/css/flatpickr.min.css" />)},
